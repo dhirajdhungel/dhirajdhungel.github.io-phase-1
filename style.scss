@@ -1,82 +1,260 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Glegoo:wght@700&family=Inter:wght@600&family=Oxygen:wght@300&family=Zilla+Slab:ital,wght@1,300;1,400&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
-$bg : #313131;
+$bg : #222222;
+$bg2 : #313131;
 $mbg: #414141;
 $fg: #525252;
 $red: #ca3e47;
 $white: #f0ece2;
-
+$white1: #b1b0b0;
+$vw: calc(100vh-17px);
+$vh: calc(100vh);
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body{
-    background-color: $bg;
-    header{
-        margin-top: 5%;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        a{
-            color: $white;
-            font-family: 'Inter', sans-serif;
-            font-size: 30px;
-            text-decoration: none;
-        }
-        .burger{
-        cursor: pointer;
-            div{
-                width: 25px;
+    background-color: $white;
+    padding: 0;
+    margin: 0;
+    .welcome{
+        margin: 0;
+        padding: 0;
+        height: $vh;
+        width: $vw;
+        background-color: $bg2;
+        header{
+            // margin-top: 5%;
+            height: 15vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            a{
+                margin-left: 3em;
+                color: $white;
+                font-family: 'Inter', sans-serif;
+                font-size: 30px;
+                text-decoration: none;
+            }
+            .burger{
+                margin-right: 4em;
+                cursor: pointer;
+                div{
+                width: 30px;
                 height: 3px;
                 background-color: $white;
-                margin: 7px 0;
+                margin: 5px 0;
                 transition: 0.5s transform;
             }
         }
-
-        .toggle{
-            .lin1{
-            transform: rotate(-45deg) translate(-6px,3px); 
-            }
-            .lin2{
-                opacity: 0;
-            }
-            .lin3{
-                transform: rotate(45deg) translate(-9px,-7px);
+            .nav-bar{
+            height: 80vh;
+            width: 60vw;
+            position: absolute;
+            top:10vh;
+            background-color: rgba($color: rgb(114, 114, 114), $alpha: .3);
+           
+            // display: flex;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            
+            .nav-links{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                
+        }
             }
         }
-    }
-
+     
     .hello{
+        height: 80vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 10%;
-    
-        .profile-p{
-            height: 20%;
-            width: 20%;
-            border: none;
-            border-radius: 100%;
+        justify-content: center;
+        // margin-top: 10%;
+        .profile{
+            display: flex;
+            justify-content: center;
+            .profile-p{
+                // height: 20%;
+                pointer-events: none;
+                width: 20%;
+                border: none;
+                border-radius: 100%;
+            }
         }
 
         p{
-        font-family: 'Ubuntu', sans-serif;
+        // font-family: 'Ubuntu', sans-serif;
+        font-family: 'Glegoo', serif;
         color: $white;
         margin: 0px;
         padding: 25px;
-        font-size: 20px;
+        font-size: 2em;
         letter-spacing: 2px;
+        }
+    }
+  }
+    .captures-heading{
+        text-align: center;
+        color: $bg;
+        font-family: 'Arima Madurai', cursive;
+        margin-top: 2em;
+
+    }
+    .grid-wrapper{
+        margin-bottom:2em;
+        background-color: $white;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-gap: 20px;
+        img{
+            // pointer-events: ;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: 500ms;
+            box-shadow: 7px 7px 10px #888888;
+        }
+        img:hover{
+            transform: scale(1.03);
+        }
+    }
+
+    .learning{
+        background-color: $bg2;
+        height: 60vh;
+        width: $vw;
+        h2{
+            text-align: center;
+            color: $white;
+            font-family: 'Arima Madurai', cursive; 
+        }
+        h3{
+            text-align: center;
+            color: $white;
+            margin-top: 5em;
+        }
+        .s-icons{
+            width: $vw;
+            margin-top: 5em;
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            grid-gap: 20px;
+            img{
+                width: 50%;
+            }
+        } 
+    }
+    .credits{
+        background-color: $mbg;
+        width: $vw;
+        height: 50vh;
+        p{
+            padding: 1em;
+            color: $white1;
+            text-align: center;
+            font-family: 'Oxygen', sans-serif;
+        }
+        .flex-foot{
+            border-top: $white1;
+            width: $vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .more{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h3{
+                    color: $white1;
+                    font-family: 'Zilla Slab', serif;
+                }
+                a{
+                    color: $white1;
+                    text-decoration: none;
+                    font-family: 'Zilla Slab', serif;
+                }
+            }
+            .resources{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h3{
+                    color: $white1;
+                    font-family: 'Zilla Slab', serif;
+                }
+                a{
+                    color: $white1;
+                    text-decoration: none;
+                    font-family: 'Zilla Slab', serif;
+                }
+            }
         }
     }
 }
 
 @media only screen and (max-width: 640px) {
     body{
-        .contents{
+        .welcome{
+            height: 100vh;
+            header{
+                a{
+                    margin-left: 1em;
+                }
+                .burger{
+                    margin-right: 2em;
+                }
+            }
             .hello{
-                margin-top: 20%;
-                .profile-p{
-                    height: 50%;
-                    width: 50%;
+                padding-bottom: 6em;
+                .profile{
+                    margin-top: 5em;
+                    .profile-p{
+                        width: 60%;
+                    }
+                }
+                p{
+                    font-size: 1.5em;
                 }
             }
         }
+        .grid-wrapper{
+
+            img{
+                object-fit: contain;
+            }
+        }
+
     }
+}
+
+.toggle{
+    .lin1{
+        transform: translate3d(0,8px,0) rotate(45deg);
+    }
+    .lin2{
+        opacity: 0;
+    }
+    .lin3{
+        transform: translate3d(0,-8px,0) rotate(-45deg);
+    }
+}
+
+.fa{
+    padding: 8px;
+    font-size: 25px;
+    color: $white;
+    text-align: center;
+    border-radius: 5%;
+    text-decoration: none;
 }
