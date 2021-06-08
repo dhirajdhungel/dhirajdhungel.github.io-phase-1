@@ -146,6 +146,7 @@ body{
         .s-icons{
             width: $vw;
             margin-top: 5em;
+            margin-left: 5em;
             display: grid;
             justify-content: center;
             grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -234,7 +235,11 @@ body{
                 object-fit: contain;
             }
         }
-
+        .learning{
+            .s-icons{
+                margin-left: 1em;
+            }
+        }
     }
 }
 

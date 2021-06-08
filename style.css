@@ -192,6 +192,7 @@ body .learning h3 {
 body .learning .s-icons {
   width: calc(100vh-17px);
   margin-top: 5em;
+  margin-left: 5em;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -304,6 +305,9 @@ body .credits .flex-foot .resources a {
   body .grid-wrapper img {
     -o-object-fit: contain;
        object-fit: contain;
+  }
+  body .learning .s-icons {
+    margin-left: 1em;
   }
 }
 
