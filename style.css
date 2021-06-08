@@ -209,7 +209,6 @@ body .learning .s-icons img {
 body .credits {
   background-color: #414141;
   width: calc(100vh-17px);
-  height: 50vh;
 }
 
 body .credits p {
@@ -220,8 +219,8 @@ body .credits p {
 }
 
 body .credits .flex-foot {
-  border-top: #b1b0b0;
   width: calc(100vh-17px);
+  padding-bottom: 5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
